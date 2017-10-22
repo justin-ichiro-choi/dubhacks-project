@@ -22,14 +22,20 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 app.get('/', function (req, res) {
-  firebase.database().ref('/').once('value').then(function(snapshot) {
-    console.log(snapshot.val(), {
-        
-      }
-    );
+  firebase.database().ref('/math').once('value').then(function(snapshot) {
+    console.log(snapshot.val()[2]);
+    var content = snapshot.val()[2];
+    res.render('index', {
+      photo: content.photo,
+      title: content.title,
+      time: content.time,
+      description: content.description,
+      created_at: content.created_at,
+      created_by: content.created_by
+    });
   });
 
-  res.render('index');
+  
 });
 
 app.listen(3000);
