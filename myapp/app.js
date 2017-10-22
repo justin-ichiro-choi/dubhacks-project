@@ -23,7 +23,10 @@ app.set('view engine', 'handlebars');
 
 app.get('/', function (req, res) {
   firebase.database().ref('/').once('value').then(function(snapshot) {
-    console.log(snapshot.val());
+    console.log(snapshot.val(), {
+        
+      }
+    );
   });
 
   res.render('index');
