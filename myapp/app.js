@@ -23,8 +23,8 @@ app.set('view engine', 'handlebars');
 
 app.get('/', function (req, res) {
   firebase.database().ref('/math').once('value').then(function(snapshot) {
-    console.log(snapshot.val()[2]);
     var content = snapshot.val()[2];
+
     res.render('index', {
       photo: content.photo,
       title: content.title,
