@@ -14,6 +14,7 @@ var config = {
 
 firebase.initializeApp(config);
 var database = firebase.database();
+var port = process.env.port || '2000';
 
 
 app.use('/css', express.static(`${__dirname}/public/stylesheets`));
@@ -38,4 +39,4 @@ app.get('/', function (req, res) {
   
 });
 
-app.listen(3000);
+app.listen(port);
