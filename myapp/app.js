@@ -1,3 +1,4 @@
+var port = process.env.PORT || 3000;
 var express = require('express');
 var exphbs  = require('express-handlebars');
 var firebase = require("firebase");
@@ -14,8 +15,6 @@ var config = {
 
 firebase.initializeApp(config);
 var database = firebase.database();
-var port = process.env.port || '2000';
-
 
 app.use('/css', express.static(`${__dirname}/public/stylesheets`));
 app.use('/js', express.static(`${__dirname}/public/javascripts`));
