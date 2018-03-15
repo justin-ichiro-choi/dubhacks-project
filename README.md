@@ -1,5 +1,5 @@
-# Projectr: Making Project-Based-Learning Simple
-Hackathon project submitted to [DubHacks 2017] (http://dubhacks.co)
+# Projectr: Making Project-Based-Learning Simple [dubprojectr.org](http://dubprojectr.org)
+Hackathon project submitted to [DubHacks 2017](http://dubhacks.co)
 
 ### Inspiration:
 During the ideation workshop hosted by DubHacks, we had talked to representatives of Teach for America about creating education equity for all. We noticed that elementary school teachers may not have as much teaching resources compared to those teaching in higher educational institutions; thus, we wanted to provide a solution to increase the accessibility of project-based learning resources.
